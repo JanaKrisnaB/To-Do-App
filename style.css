@@ -1,0 +1,138 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    box-sizing: border-box;
+}
+.container{
+    width: 100%;
+    min-height: 100vh;
+    background: black;
+    padding: 10px;
+}
+.igris{
+    display: block;
+    max-width: 100%;
+    width: 500px; /* or any desired width */
+    margin: 20px auto 0 auto;
+    border-radius: 10px;
+}
+h2{
+    color: #f9f8f8;
+    display:flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+.todo-app{
+    width: 100%;
+    max-width: 540px;
+    background:linear-gradient(0deg,#a5a7ae,#080808);
+    margin: 40px auto 20px;
+    padding: 40px 30px 70px;
+    border-radius: 10px;
+}
+.td{
+    color: #33405c;
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.row{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background:#1a1520;
+    border-radius: 30px;
+    padding-left: 20px;
+    margin-bottom: 25px;
+}
+ul li {
+    transition: all 0.3s ease;
+}
+ul li.removed {
+    opacity: 0;
+    transform: translateX(100px);
+}
+
+input{
+    flex: 1;
+    border: none;
+    color: #d5d2d2;
+    background: transparent;
+    outline: none;
+    padding: 10px;
+    font-weight: 14px;
+}
+
+button{
+    border: none;
+    outline: nonw;
+    padding: 16px 50px;
+    background: #5b0b02;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 40px;
+}
+
+ul li{
+    list-style:none;
+    color: #000000;
+    font-family:monospace;
+    font-style: italic;
+    font-weight:bold;
+    font-size: 20px;
+    padding: 12px 8px 12px 50px;
+    user-select: none;
+    cursor: pointer;
+    position: relative;
+}
+ul li::before{
+    content: '';
+    position: absolute;
+    height: 28px;
+    width: 28px;
+    border-radius: 50%;
+    background-image: url(unchecked.png);
+    background-size: cover;
+    background-position: center;
+    top: 12px;
+    left: 8px; 
+}
+
+ul li.checked{
+    color: #888;
+    text-decoration: line-through;
+}
+
+ul li.checked::before{
+    background-image: url(checked.png);
+}
+
+ul li span{
+    position:absolute;
+    right: 0;
+    top: 5px;
+    width: 40px;
+    height: 40px;
+    font-size: 22px;
+    color: rgb(12, 12, 12);
+    line-height: 40px;
+    text-align: center;
+    border-radius: 50%;
+}
+
+ul li span:hover{
+    background-color: #d5d2d2;
+}
+@media (max-width: 600px) {
+  .todo-app {
+    width: 90%;
+    padding: 20px;
+  }
+
+  .todo-banner {
+    width: 90%;
+  }
+}
